@@ -6,7 +6,7 @@ package calculamédia;
  */
 
 //classe aluno - representa todo aluno da turma, suas notas e principais atividades;
-public abstract class aluno 
+public class aluno   //aluno não pode ser abstrata porque tem o método getConceito.
 {
     protected String Nome;
     protected String Sexo;
@@ -26,7 +26,7 @@ public abstract class aluno
     } 
     
     public String getConceito() {
-        return notas.getConceito();
+        return notas.getConceito();  //esse método aqui.
     }
     
 }

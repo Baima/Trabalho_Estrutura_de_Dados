@@ -1,4 +1,4 @@
-Comando:
+﻿Comando:
 1a Avaliação de Estruturas de Dados
 Criar um programa que utilize classes, objetos, herança, polimorfismo, tratamento de 
 exceções e encapsulamento (todos os atributos private e cada um com seu respectivo 
@@ -22,6 +22,7 @@ Idade
 1 classe EngCom e 1 classe EngTel que herdam de CadastraAluno.
 alunos de EngCom tem o atributo SabeConsertarImpressora (sim/não)
 alunos de EngTel tem o atributo SabeSubirEmTorre(sim/não)
+
 1 classe VerificaMedia, que vai checar as informações do aluno, com base nelas vai dar o número certo de trabalhos e provas feitos pelo mesmo e permitir que o usuário coloque a pontuação de cada uma. Com base nisso, calcular sua média final e exibir.
 Caso o aluno seja de Eng da Computação, deverá fazer um trabalho, alem das 3 provas
 Caso o aluno seja de Eng. Telecom. deverá fazer uma prova a mais

@@ -16,7 +16,7 @@ public class boletim {
     private float media;
     
     public void addNota(int indicie, float nota) {
-        if ((nota>=0)&(nota<11)) {
+        if ((nota>=0)&(nota<=10)) {   // o tipo de variável permitia notas "10,9" por exemplo.
           notas[indicie] = nota;  
         } 
        calculaMedia();

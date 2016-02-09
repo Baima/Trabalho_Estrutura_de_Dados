@@ -9,7 +9,8 @@ package calculamédia;
  *
  * @author paulo
  */
-public class avaliacao {
+public class avaliacao 
+{
     int numero;
     float nota;
     String tipo;
@@ -19,4 +20,13 @@ public class avaliacao {
         this.numero = numero;
         this.tipo = tipo;
     }
+   public void calculaNota()
+   {
+    if(tipo == "prova")
+    {
+        this.nota = nota;
+    }
+    else if (tipo == "trabalho")
+        this.nota = nota/10;
+   }
 }
