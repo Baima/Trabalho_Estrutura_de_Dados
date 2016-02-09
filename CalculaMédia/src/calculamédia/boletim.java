@@ -14,9 +14,11 @@ public class boletim {
     private String conceito;
     private float media;
     private avaliacao[] avaliacoes;
+    private aluno aluno;
     
-    public boletim (avaliacao[] av) {
+    public boletim (avaliacao[] av, aluno al) {
         avaliacoes = av;
+        this.aluno = al;
     }
 
     
@@ -27,6 +29,10 @@ public class boletim {
             soma = soma + avaliacoes[i].getNota();   
             }
         med = soma/6;
+        if (aluno.getSexo().equals("feminino")) {
+            med = med + (med*0.1f); //adicionando os 10% para as muliéres (.^.)
+        }
+        
         } else med = 0;
       media = med;  
     }

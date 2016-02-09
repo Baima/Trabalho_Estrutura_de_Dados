@@ -37,10 +37,15 @@ public class avaliacao
    
    
    public void RealizarAvaliacao(float nota) {
-       if ((nota>=0)&(nota<=10)) {   
+       if (realizada == false) {
+           if ((nota>=0)&(nota<=10)) {   
           this.nota = nota; 
           realizada = true;
-        } 
+          } 
+       } else {
+           //erro, avalização já realizada
+       }
+       
    }
    
    public float getNota() {

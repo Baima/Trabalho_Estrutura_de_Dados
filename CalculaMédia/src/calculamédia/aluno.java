@@ -9,21 +9,23 @@ package calculamédia;
 public class aluno   //aluno não pode ser abstrata porque tem o método getConceito.
 {
     protected String Nome;
-    protected String Sexo;
+    protected String matricula;
+    private String Sexo;
     protected String Curso;
     int Idade;
     protected boletim notas;//notas
     protected avaliacao[] avaliacoes; //classes que representam as avaliações do aluno
     
     //método construtor da classe aluno com as informações iniciais
-    aluno(String Nome,String Sexo, String Curso, int Idade)
+    aluno(String Nome, String matricula,String Sexo, String Curso, int Idade)
     {
         this.Nome = Nome;
         this.Sexo = Sexo;
+        this.matricula = matricula;
         this.Curso = Curso;
         this.Idade = Idade;
         avaliacoes = new avaliacao[6];
-        notas = new boletim(avaliacoes); //cria um novo boletim para o aluno
+        notas = new boletim(avaliacoes,this); //cria um novo boletim para o aluno
     } 
     
     public float getMedia() {
@@ -33,7 +35,7 @@ public class aluno   //aluno não pode ser abstrata porque tem o método getConc
         return notas.getConceito();  //esse método aqui.
     }
     
-    public void fazerAvalliacao(int numeroAvaliacao,float nota) {
+    public void fazerAvaliacao(int numeroAvaliacao,float nota) {
         avaliacoes[numeroAvaliacao-1].RealizarAvaliacao(nota);
     }
     
@@ -47,5 +49,13 @@ public class aluno   //aluno não pode ser abstrata porque tem o método getConc
         }
     return text;
 } 
+    
+    public String getMatricula() {
+        return matricula;
+    }
+    
+    public String getSexo() {
+        return Sexo;
+    }
     
 }
