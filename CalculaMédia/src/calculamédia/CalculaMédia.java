@@ -23,20 +23,22 @@ public class CalculaMédia
         Curso = scan.nextLine();
         System.out.println("Digite a idade do aluno:");
         Idade = scan.nextInt();
+       
+        EngCom aluno1 = new EngCom(Nome,Sexo,Idade);
+        EngTel anulo2 = new EngTel(Nome,Sexo,Idade);
         
-        aluno cads = new aluno(Nome,Sexo,Curso,Idade);
-        EngCom eng = new EngCom(Nome,Sexo,Idade);
-        EngTel tel = new EngTel(Nome,Sexo,Idade);
-        
-        if (Curso == "Eng. Computação")
-        {
-           eng.calculaNota();
-        }
-        else if (Curso == "Eng. Telecom")
-        {
-           tel.calculaNota();
-        }
-      
-    }
+        System.out.println(aluno1.consultarAvaliacoes());
+        System.out.println(aluno1.getConceito());
+        aluno1.fazerAvalliacao(1, 8);
+        aluno1.fazerAvalliacao(2, 5);
+        aluno1.fazerAvalliacao(3, 6);
+        aluno1.fazerAvalliacao(4, 9);
+        aluno1.fazerAvalliacao(5, 8);
+        aluno1.fazerAvalliacao(6, 9);
+        System.out.println(aluno1.consultarAvaliacoes());
+        System.out.println(aluno1.getConceito());
+     System.out.println(aluno1.getMedia());
+    
+}
     
 }

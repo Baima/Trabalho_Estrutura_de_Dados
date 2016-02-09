@@ -11,29 +11,30 @@ package calculamédia;
  */
 
 public class boletim {
-    private float[] notas = {0,0,0,0,0,0};
     private String conceito;
     private float media;
+    private avaliacao[] avaliacoes;
     
-    public void addNota(int indicie, float nota) {
-        if ((nota>=0)&(nota<=10)) {   // o tipo de variável permitia notas "10,9" por exemplo.
-          notas[indicie] = nota;  
-        } 
-       calculaMedia();
-       calculaConceito();
+    public boletim (avaliacao[] av) {
+        avaliacoes = av;
     }
+
     
     public void calculaMedia () {
-        float soma=0;
-        int i;
-        for (i=0;i<=6;i++) {
-            soma =+ notas[i];   
-        }
-        media = soma/6;
+        float soma = 0,med = 0;
+        if (todasAvaliacoesRealizadas()) {
+            for (int i=0;i<=5;i++) {
+            soma = soma + avaliacoes[i].getNota();   
+            }
+        med = soma/6;
+        } else med = 0;
+      media = med;  
     }
     
     public void calculaConceito () {
-        if (media<5) {
+        if (todasAvaliacoesRealizadas() == false) {
+            conceito = "SN";
+        } else if (media<5) {
             conceito = "INS";
         } else if (media<7) {
             conceito = "REG";
@@ -45,6 +46,24 @@ public class boletim {
     }
     
     public String getConceito() {
+        calculaMedia(); 
+        calculaConceito ();
         return conceito;
+    }
+    
+    //checa se o aluno realizou todas as avaliações
+    public boolean todasAvaliacoesRealizadas() {
+        boolean valor = false;
+        for (int i=0;i<=5;i++) {
+            if (avaliacoes[i].foiRealizada() == false) {
+                valor = false;
+                break;
+            }  else valor = true; 
+        }
+        return valor;
+    }
+    
+    public float getmedia() {
+        return media;
     }
 }

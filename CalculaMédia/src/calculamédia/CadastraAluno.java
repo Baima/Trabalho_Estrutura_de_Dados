@@ -11,7 +11,6 @@ public class CadastraAluno
     String Nome,Sexo,Curso;
     int Idade;
     
-    Scanner scan = new Scanner(System.in);
     CadastraAluno(String Nome,String Sexo, String Curso, int Idade)
     {
         this.Nome = Nome;

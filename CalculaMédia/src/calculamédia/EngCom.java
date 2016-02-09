@@ -13,16 +13,17 @@ public class EngCom extends aluno //herança de classes
         avaliacoes[1] = new avaliacao(2,"prova");
         avaliacoes[2] = new avaliacao(3,"prova");
         avaliacoes[3] = new avaliacao(4,"trabalho");
-        if (Sexo == "masculino")
+        if (super.Sexo.equals("masculino"))
         {
-            avaliacoes[5] = new avaliacao(5, "prova");
-            avaliacoes[6] = new avaliacao(6, "prova");  
-        }
-        else if (Sexo == "feminino")
+            avaliacoes[4] = new avaliacao(5, "prova");
+            avaliacoes[5] = new avaliacao(6, "prova");  
+        } else if (super.Sexo.equals("feminino"))
         {
-            avaliacoes [5] = new avaliacao (5, "trabalho");
-            avaliacoes [6] = new avaliacao (6, "trabalho");
-        }
+            avaliacoes [4] = new avaliacao(5, "trabalho");
+            avaliacoes [5] = new avaliacao(6, "trabalho");
+        } 
+        
+        
     }
     
     public void calculaNota() 
@@ -31,9 +32,7 @@ public class EngCom extends aluno //herança de classes
     }
    
     
-    public void adicionarNota() 
-    {
-        
-    }
+    
+    
     
 }
