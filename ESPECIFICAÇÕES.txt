@@ -1,0 +1,33 @@
+﻿Comando:
+1a Avaliação de Estruturas de Dados
+Criar um programa que utilize classes, objetos, herança, polimorfismo, tratamento de 
+exceções e encapsulamento (todos os atributos private e cada um com seu respectivo 
+método get e set public);
+O programa deve ter no mínimo:
+
+1 objeto de cada classe;
+1 classe filho;
+4 atributos em cada classe;
+2 métodos em cada classe (com exceção dos métodos get e set). O usuário deverá entrar com os valores durante o tempo de execução do programa; O código deve estar identado (bem estruturado quanto a sua organização); Não precisa preparar slides, podem apresentar diretamente do código; O código deve ser executado e funcionar; Equipes de 3 pessoas; Apresentação de 20 a 25 min - todos devem falar durante a apresentação; A pontuação consistirá em: 2,5 pts código e 2,5 pts apresentação; 1 ponto extra será dado a equipe que utilizar interface gráfica; Todas as equipes devem entregar o código até o dia 12/02.
+Especificações:
+
+1 classe pro main.
+1 classe CadastraAluno, que vai receber as informações do aluno e salvar
+
+nome:
+sexo: ( ͡° ͜ʖ ͡°)
+Curso:
+Idade
+
+1 classe EngCom e 1 classe EngTel que herdam de CadastraAluno.
+alunos de EngCom tem o atributo SabeConsertarImpressora (sim/não)
+alunos de EngTel tem o atributo SabeSubirEmTorre(sim/não)
+
+1 classe VerificaMedia, que vai checar as informações do aluno, com base nelas vai dar o número certo de trabalhos e provas feitos pelo mesmo e permitir que o usuário coloque a pontuação de cada uma. Com base nisso, calcular sua média final e exibir.
+Caso o aluno seja de Eng da Computação, deverá fazer um trabalho, alem das 3 provas
+Caso o aluno seja de Eng. Telecom. deverá fazer uma prova a mais
+Caso o aluno seja mulher, deverá fazer dois trabalhos a mais.
+Caso o aluno seja homem, devera fazer mais duas provas.
+
+Alunos com a média menor que 5 receberão insuficiente e serão reprovados
+Alunas ganham 10% a mais na nota ( ͡° ͜ʖ ͡°)

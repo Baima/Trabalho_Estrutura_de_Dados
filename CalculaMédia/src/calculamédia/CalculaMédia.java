@@ -17,18 +17,15 @@ public class CalculaMédia
      
         System.out.println("Digite o nome do aluno:");
         Nome = scan.nextLine();
-        System.out.println("Sexo:");
+        System.out.println("Digite o sexo do aluno:");
         Sexo = scan.nextLine();
-        System.out.println("Curso:");
+        System.out.println("Digite o nome do curso:");
         Curso = scan.nextLine();
-        System.out.println("Idade:");
+        System.out.println("Digite a idade do aluno:");
         Idade = scan.nextInt();
-        
-        CadastraAluno cads = new CadastraAluno(Nome,Sexo,Curso,Idade);
-        EngCom eng = new EngCom(Nome,Sexo,Idade);
-        System.out.println(eng.Media(Sexo));
-        
-      
-    }
+        Turma EngTeleco2015 = new Turma(50);
+        EngTeleco2015.novoAluno(Nome,"201506840033", Sexo, Curso, Idade);
+        EngTeleco2015.getAluno("201506840033").consultarAvaliacoes();
+}
     
 }
